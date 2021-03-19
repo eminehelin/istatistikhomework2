@@ -1,0 +1,98 @@
+---
+title: "istatistikhomework2"
+author: "Emine Helin Kart"
+date: "19 03 2021"
+output: word_document
+---
+
+**Soru 1: (10 Puan)** RMarkdown kullanarak Ocak ayında kaç dakika olduğunu hesaplayınız.
+
+```{r}
+24*60*31
+```
+
+**Soru 2: (10 Puan)** RMarkdown kullanarak 3 8 1 4 1 5 9 2 6 12 42 sayılarını *toplama işareti kullanmadan* toplayınız.
+
+```{r}
+x <- c(3, 8, 1, 4, 1, 5, 9, 2, 6, 12, 42)
+sum(x)
+```
+
+**Soru 3: (10 Puan)** RMarkdown kullanarak `x` adında 1, 0.9, ..., 0, -0.1, ..., -0.9, -1 serisini içeren bir vektör yaratınız ve sonucu yazdırınız.
+
+```{r}
+x <- seq(-1, 1, by = 0.1)
+x
+```
+
+**Soru 4: (10 Puan)** `"Mülkiye!"` metnini tekrar tekrar yazmadan R'ın bunu 23 defa ekrana yazdırmasını nasıl sağlarız?
+
+```{r}
+x <- c("Mülkiye!")
+rep(x, 23)
+```
+
+**Soru 5: (10 Puan)** `wizards` ve `ranking` adında iki vektör yaratınız.
+`wizards`, Harry, Ron, Fred, George ve Sirius isimlerini, `ranking` ise 4, 2, 5, 1, 3 sayılarını içersin.
+
+```{r}
+wizards <- c("Harry", "Ron", "Fred", "George", "Sirius")
+ranking <- c(4, 2, 5, 1, 3)
+```
+
+**Soru 6: (10 Puan)** `wizards` vektörünün üçünçü ve birinci elemanını yazdırınız.
+
+```{r}
+wizards <- c("Harry", "Ron", "Fred", "George", "Sirius")
+wizards[3]
+wizards[1]
+```
+
+**Soru 7: (10 Puan)** `wizards` vektöründeki Fred, George ve Sirius isimlerini Hermione, Ginny ve Malfoy isimleri ile değiştiriniz.
+
+```{r}
+wizards <- c("Harry", "Ron", "Fred", "George", "Sirius")
+wizards[3] <- "Hermione"
+wizards[4] <- "Ginny"
+wizards[5] <- "Malfoy"
+wizards
+```
+
+**Soru 8: (10 Puan)** Harry Potter okumamış biri bu karakterlerin kimler olduğunu bilmek için etiketlere ihtiyaç duyar.
+`wizards` vektörünün elemanlarına **Lead**, **Friend**, **Friend**, **Wife** ve **Rival** isimlerini veriniz.
+Sonuçları görüntüleyiniz.
+
+```{r}
+names(wizards) <- c("Lead", "Friend", "Friend", "Wife", "Rival")
+wizards
+```
+
+**Soru 9: (10 Puan)** İstatistik II ara sınavına 27 öğrenci girmiştir.
+Bu öğrencilerin notları: 18, 95, 76, 90, 84, 83, 80, 79, 63, 76, 55, 78, 90, 81, 42, 88, 89, 92, 73, 83, 72, 85, 66, 77, 82, 99 ve 87 olmuştur.
+Sınav notlarını `scores` isimli bir vektöre kaydediniz.
+Sınav notlarının ortalama, medyan ve aralığını hesaplayınız.
+
+```{r}
+scores <- c(18, 95, 76, 90, 84, 83, 80, 79, 63, 76, 55, 78, 90, 81, 42, 88, 89, 92, 73, 83, 72, 85, 66, 77, 82, 99, 87)
+mean(scores)
+median(scores)
+range(scores)
+```
+
+**Soru 10: (10 Puan)** 2017'de Nilay'ın yıllık geliri 22000TL, toplam giderleri 3000TL'dir.
+2018'de yıllık geliri 67000TL, toplam giderleri 23000TL'dir.
+2019'da yıllık geliri 70000TL, toplam giderleri 32000TL'dir.
+Son olarak 2020'de yıllık geliri 72000TL, toplam giderleri 35000TL'dir.
+Bu bilgileri kaydetmek için `years` (yıllar), `income` (gelir) ve `expenses` (gider) adında 3 farklı vektör yaratınız.
+Nilay'ın yıllık tasarruflarını hesaplayınız ve bu değerleri `savings` (tasarruflar) isimli bir vektöre kaydediniz.
+
+```{r}
+years <- c(2018, 2019, 2020)
+income <- c(67000, 70000, 72000)
+expenses <- c(23000, 32000, 35000)
+savings <- c(44000, 38000, 37000)
+```
+
+**BONUS: (5 Puan)** Markdown kullanarak komik bir köpek fotoğrafı ekleyiniz.
+
+![Funny Dog](https://i.pinimg.com/originals/07/a8/8d/07a88d1f5115a47e65c3f2598a760d82.jpg)
